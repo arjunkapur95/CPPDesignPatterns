@@ -1,0 +1,26 @@
+Info 3220 Assignment 3 Doccumentation
+
+In this assignment i worked with a ui interface to perform a number of actions on the bodies of type universe
+I have 11 buttons in UI.
+Pause:In pause i stop the timer and set pause as enabled to one,when pause is enabled all the bodies on the view will be still.
+Reclicking pause will enable the program and let it run again
+
+Zodiacs:When the zodiac button si clicked my program checks with all the corresponding celestial bodies of the config file to see if there are any zodiac lines between two suns.
+Labels:Whenever label is clicked the program jus disables the name of the planet and continues the simulation.
+ZoomOut:Whenever zoom Out button is clicked i assign the distance scale to m_distanceScale*=1.1;
+ZoomIn :Whenever Zoom In is clicked i assign the distance scale to m_distanceScale*=0.9;
+
+i have also mouse enabled zooming using the mouse pad for my simulation
+
+TimeStep Increase : whenever Time stamp Increase button is clicked i assign the m_physicsStepSize to +=100000  
+TimeStep Decrease : whenever Time stamp Decrease button is clicked i assign the m_physicsStepSize to -=100000  
+ViewAll :Whenever the view all button is clicked i zoom out so the usercan view all the planets in the universe.Reclicking ViewAll returns to the original state
+Rotate Left or right:Whenever the Rotate Left or right button is clicked i change the angle of all the planets so they are mapped on different x,y coordinates based on the values.
+
+Save State and restore state are being used for the design Pattern Momento
+In save state i am saving the x,y,xForce,yForce,xVel,yVel to a list .
+And in the restore i am asking the user which state they would like to go back to.
+I am also using the visitor design patter to get planet information on to a TextBrowser which is visible on the screen and modifiying the planet for instance,if any object is clicked and the x,y coordinates are almost similar
+i use my visitor to get the information about that UniverseBody.
+
+I also use mosue click events for centering the entier view for any given Universebody.
